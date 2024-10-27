@@ -1,3 +1,4 @@
+
 public class Singleton {
     // Atributo estático para almacenar la única instancia de la clase
     private static Singleton instance;
@@ -22,6 +23,22 @@ public class Singleton {
 }
 
 // Uso del patrón Singleton
+public class Main {
+    public static void main(String[] args) {
+        Singleton singleton1 = Singleton.getInstance();
+        Singleton singleton2 = Singleton.getInstance();
+
+        // Comprobando si ambas referencias apuntan a la misma instancia
+        System.out.println(singleton1 == singleton2);  // true
+
+        singleton1.mostrarMensaje();  // Salida: Hola desde el Singleton!
+    }
+}
+
+
+
+
+//Este archivo se llama Main.java
 public class Main {
     public static void main(String[] args) {
         Singleton singleton1 = Singleton.getInstance();
